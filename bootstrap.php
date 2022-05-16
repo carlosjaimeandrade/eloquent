@@ -1,13 +1,9 @@
 <?php
 
-require "vendor/autoload.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-
-
 $capsule = new Capsule;
-
 
 $capsule->addConnection([
 
@@ -31,4 +27,4 @@ $capsule->setAsGlobal();
 
 $capsule->bootEloquent();
 
-date_default_timezone_set('america/sao_paulo');
+date_default_timezone_set('america/sao_paulo'); 

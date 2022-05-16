@@ -16,7 +16,8 @@ class Todo
 
             $table->timestamps();
 
-            /*     $table->string('description');
+            /*
+            $table->string('description');
      
             $table->string('category');
      

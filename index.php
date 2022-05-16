@@ -1,31 +1,11 @@
 <?php
-require "bootstrap.php";
 
-use Src\Models\Todo;
+require "vendor/autoload.php";
+require "./bootstrap.php";
+require "./src/help/config.php";
 
-use Database\Todo as TodoDataBase;
+use Src\help\Routes;
 
-/* $todo = new TodoDataBase();
-$todo->up(); 
-*/  
+$routes = new Routes();
+$routes->render();
 
-$user = Todo::Create(['todo' => "Ahmed Khan"]);
-
-/* $user = Todo::all()->where('todo', 'Paris to London'); */
-
-$user = Todo::all();
-
-var_dump($user);
-
-$user2 = Todo::find(1);
-
-var_dump($user2);   
-
-/* $user2->delete(); */
-/* Todo::destroy(2, 3); */
-
-/* $user3 = Todo::find(4);
- 
-$user3->todo = 'Paris to London';
- 
-$user3->save(); */
